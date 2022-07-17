@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+<head>
+<title>Route planner</title>
+
+</head>
+<body>
+<iframe
+referrerpolicy="no-referrer-when-downgrade"
+width="2000px"
+height="750px"
+frameborder="0px"
+style="border: 0px"
+src="https://www.google.com/maps/embed/v1/directions?origin=GorkyPark,Moscow&destination=StBasil,Moscow&key=AIzaSyAbJXafBO5Cpt9a3WETNODAOSnJQd3cfTs"
+id="map">
+</iframe>
+<input type="text" id="start" placeholder="Start">
+<input type="text" id="end" placeholder="End">
+<input type="button" onClick="detectRoute()" value="Detect route">
+</body>
+<script>
+function detectRoute(){
+	var start = document.getElementById("start");
+	var end = document.getElementById("end");
+	link="https://www.google.com/maps/embed/v1/directions?origin=" + start.value + "&destination=" + end.value + "&key=AIzaSyAbJXafBO5Cpt9a3WETNODAOSnJQd3cfTs"
+	document.getElementById('map').src=link
+}
+</script>
+</html>
